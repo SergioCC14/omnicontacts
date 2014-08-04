@@ -13,7 +13,8 @@ module OmniContacts
         super app, client_id, client_secret, options
         @auth_host = "oauth.live.com"
         @authorize_path = "/authorize"
-        @scope = options[:permissions] || "wl.signin, wl.basic, wl.birthday , wl.emails ,wl.contacts_birthday , wl.contacts_photos"
+        # Los permisos que utilizabamos antes eran wl.signin, wl.basic, wl.birthday , wl.emails ,wl.contacts_birthday , wl.contacts_photos
+        @scope = options[:permissions] || "wl.emails ,wl.contacts_birthday , wl.contacts_photos, wl.contacts_emails"
         @auth_token_path = "/token"
         @contacts_host = "apis.live.net"
         @contacts_path = "/v5.0/me/contacts"
